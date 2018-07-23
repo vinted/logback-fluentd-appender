@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vinted</groupId>
+  <artifactId>logback-fluentd-appender</artifactId>
+  <version>0.0.1</version>
+  <name>logback-fluentd-appender</name>
+  <description>fluentd logback appender</description>
+  <url>https://github.com/vinted/logback-fluentd-appender</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <fluentd.logger.version>0.3.3</fluentd.logger.version>
+    <logback.version>1.2.3</logback.version>
+    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+  </properties>
+
+  <packaging>jar</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.fluentd</groupId>
+      <artifactId>fluent-logger</artifactId>
+      <version>${fluentd.logger.version}</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <developers>
+    <developer>
+      <name>Tomas Varneckas</name>
+      <email>tomas.varneckas@vinted.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:vinted/logback-fluentd-appender.git</connection>
+    <developerConnection>scm:git:git@github.com:vinted/logback-fluentd-appender.git</developerConnection>
+    <url>git@github.com:vinted/logback-fluentd-appender.git</url>
+    <tag>logback-fluentd-appender-0.0.1</tag>
+  </scm>
+</project>
