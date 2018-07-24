@@ -1,4 +1,4 @@
-package com.vinted.logback.fluentd.appender;
+package com.vinted.logback.fluentd;
 
 import java.util.HashMap;
 import java.util.Map;
