@@ -33,7 +33,7 @@ public class FluentdAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
             super.stop();
         } finally {
             if (fluentLogger != null) {
-                fluentLogger.close();
+                FluentLogger.closeAll();
             }
         }
     }
